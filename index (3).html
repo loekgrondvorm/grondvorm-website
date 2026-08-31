@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grondvorm — voorraad &amp; magazijnontwerp</title>
+<meta name="description" content="Grondvorm adviseert ondernemingen over het beheer van hun voorraad en de inrichting van hun magazijnruimte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0C2137;
+  --navy:#12304F;
+  --steel:#5C7692;
+  --mist:#9FB4C7;
+  --orange:#E2601C;
+  --orange-lift:#F26E24;
+  --paper:#FAF8F4;
+  --tint:#EDF2F6;
+  --line:#DDE4EB;
+  --line-dark:rgba(255,255,255,.15);
+  --r-lg:30px;
+  --r-md:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;
+  font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1140px;margin:0 auto;padding:0 26px}
+.mono{
+  font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;
+}
+
+/* header */
+header{position:sticky;top:0;z-index:60;background:rgba(250,248,244,.9);backdrop-filter:blur(12px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--navy)}
+.brand b{font-family:Archivo,sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em}
+nav{display:flex;align-items:center;gap:28px}
+.links{display:flex;gap:26px}
+.links a{color:var(--steel);text-decoration:none;font-size:15px;transition:color .18s ease}
+.links a:hover{color:var(--orange)}
+.cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--orange);color:var(--navy);
+  font-family:Archivo,sans-serif;font-weight:700;font-size:15.5px;letter-spacing:-.01em;
+  padding:13px 26px;border-radius:999px;text-decoration:none;
+  transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+.cta:hover{background:var(--orange-lift);transform:translateY(-2px);box-shadow:0 10px 22px rgba(226,96,28,.28)}
+.cta svg{transition:transform .2s ease}
+.cta:hover svg{transform:translateX(3px)}
+.cta.lg{font-size:17px;padding:16px 32px}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+
+/* hero */
+.hero{padding:16px 0 8px}
+.hero-panel{
+  position:relative;overflow:hidden;
+  background:var(--navy);color:#fff;
+  border-radius:var(--r-lg);
+  padding:104px 68px 96px;
+}
+.blob{position:absolute;border-radius:50%;pointer-events:none}
+.blob.a{width:520px;height:520px;right:-140px;top:-190px;background:rgba(226,96,28,.16);filter:blur(10px)}
+.blob.b{width:360px;height:360px;right:120px;bottom:-210px;background:rgba(255,255,255,.05)}
+.blob.c{width:150px;height:150px;right:78px;top:120px;background:rgba(226,96,28,.5)}
+.hero-panel .inner{position:relative;z-index:2;max-width:22ch}
+.hero-panel .mono{color:#F6A97A;margin-bottom:24px}
+h1{font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(36px,5.2vw,60px);line-height:1.05;letter-spacing:-.035em}
+.hero-panel p{margin-top:26px;max-width:44ch;font-size:19px;color:#CBD9E6;line-height:1.6}
+.hero-panel .cta{margin-top:38px}
+.pills{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:10px;margin-top:52px}
+.pills a{
+  display:inline-flex;align-items:center;gap:9px;
+  border:1px solid var(--line-dark);border-radius:999px;
+  padding:9px 20px;color:#DCE7F1;text-decoration:none;font-size:15px;
+  transition:background .18s ease,border-color .18s ease,color .18s ease;
+}
+.pills a:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.35);color:#fff}
+.pills b{width:7px;height:7px;border-radius:50%;background:var(--orange);display:block}
+
+/* sections */
+section{padding:96px 0}
+.head{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.head .mono{color:var(--steel);white-space:nowrap}
+.head i{flex:1;height:1px;background:var(--line);display:block}
+h2{font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(28px,3.6vw,40px);letter-spacing:-.03em;color:var(--navy);line-height:1.14}
+.mission{margin-top:22px;font-size:20px;line-height:1.6;max-width:62ch;color:var(--navy)}
+
+/* services */
+.svc{
+  margin-top:34px;background:#fff;border-radius:var(--r-lg);
+  padding:44px 48px;
+  display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:40px;
+  box-shadow:0 1px 2px rgba(12,33,55,.05),0 14px 34px rgba(12,33,55,.05);
+}
+.svc .no{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:50%;
+  background:var(--tint);color:var(--navy);
+  font-family:Archivo,sans-serif;font-weight:700;font-size:15px;margin-bottom:16px;
+}
+.svc:nth-of-type(odd) .no{background:rgba(226,96,28,.14);color:var(--orange)}
+.svc h3{font-family:Archivo,sans-serif;font-weight:700;font-size:29px;letter-spacing:-.025em;color:var(--navy);line-height:1.12}
+.svc .intro{font-size:18px;max-width:52ch}
+.svc ul{list-style:none;margin:22px 0 26px}
+.svc li{position:relative;padding-left:26px;margin-bottom:11px;max-width:52ch}
+.svc li::before{content:"";position:absolute;left:0;top:.66em;width:9px;height:9px;border-radius:50%;background:var(--orange);opacity:.85}
+.deliver{font-size:16.5px;color:var(--navy);background:var(--tint);border-radius:var(--r-md);padding:18px 22px;max-width:56ch}
+.bridge{
+  margin-top:34px;padding:30px 40px;border-radius:var(--r-lg);
+  background:var(--tint);
+  font-family:Archivo,sans-serif;font-weight:500;letter-spacing:-.015em;
+  font-size:19.5px;line-height:1.5;color:var(--navy);max-width:none;
+}
+
+/* wie wij zijn */
+.people-sec{padding-top:20px}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;margin-top:38px}
+.person{
+  background:#fff;border-radius:var(--r-lg);padding:38px 36px 34px;
+  box-shadow:0 1px 2px rgba(12,33,55,.05),0 14px 34px rgba(12,33,55,.05);
+}
+.ini{
+  width:64px;height:64px;border-radius:50%;
+  object-fit:cover;display:block;margin-bottom:20px;
+  border:2px solid var(--tint);
+}
+.person h3{font-family:Archivo,sans-serif;font-weight:700;font-size:23px;color:var(--navy);letter-spacing:-.02em}
+.person p{margin-top:16px;font-size:16.5px}
+.person p.quote{
+  font-style:italic;color:var(--navy);
+  border-left:3px solid var(--orange);padding-left:16px;
+}
+.person .mail{
+  display:inline-block;margin-top:20px;padding:9px 18px;border-radius:999px;
+  background:var(--tint);color:var(--navy);text-decoration:none;font-size:15px;
+  transition:background .18s ease,color .18s ease;
+}
+.person .mail:hover{background:var(--orange);color:var(--navy)}
+
+/* contact */
+.contact-panel{
+  position:relative;overflow:hidden;
+  background:var(--navy);color:#fff;border-radius:var(--r-lg);
+  padding:74px 68px;
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start;
+}
+.contact-panel .blob.d{width:420px;height:420px;left:-160px;bottom:-230px;background:rgba(226,96,28,.14)}
+.contact-panel>div{position:relative;z-index:2}
+.contact-panel .mono{color:#F6A97A}
+.contact-panel h2{color:#fff;margin-top:14px}
+.contact-panel p.lead{margin-top:18px;font-size:18.5px;color:#CBD9E6;max-width:40ch}
+.maillist .grp+.grp{margin-top:26px}
+.maillist .mono{color:var(--mist);display:block;margin-bottom:8px}
+.maillist a{
+  display:flex;justify-content:space-between;gap:14px;align-items:baseline;
+  color:#fff;text-decoration:none;font-size:16.5px;
+  padding:13px 20px;border-radius:999px;background:rgba(255,255,255,.06);
+  margin-bottom:9px;transition:background .18s ease,color .18s ease;
+}
+.maillist a:hover{background:rgba(255,255,255,.13)}
+.maillist a span{color:var(--mist);font-size:14.5px;white-space:nowrap}
+
+footer{padding:34px 0 44px;color:var(--steel);font-size:14.5px}
+footer .foot{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:26px;align-items:start;
+  border-top:1px solid var(--line);padding-top:30px;
+}
+footer .foot b{
+  display:block;color:var(--navy);font-family:Archivo,sans-serif;
+  font-weight:700;font-size:14px;margin-bottom:6px;
+}
+footer .foot span{display:block;line-height:1.6}
+footer a{color:var(--steel);text-decoration:none}
+footer a:hover{color:var(--orange)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .75s ease,transform .75s ease}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+@media (max-width:900px){
+  .svc,.contact-panel{grid-template-columns:1fr;gap:28px}
+  .links{display:none}
+  section{padding:64px 0}
+  .hero-panel{padding:62px 30px 56px;border-radius:24px}
+  .hero-panel .inner{max-width:none}
+  .svc{padding:34px 28px}
+  .contact-panel{padding:48px 24px}
+  .maillist a{
+    flex-direction:column;align-items:flex-start;gap:2px;
+    border-radius:18px;padding:14px 18px;font-size:15.5px;
+    overflow-wrap:anywhere;
+  }
+  .maillist a span{white-space:normal}
+  .bridge{padding:26px 28px;font-size:18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Grondvorm">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M88 40 L88 22 L22 22 L22 78 L88 78 L88 50 L52 50" fill="none" stroke="#1F4E9C" stroke-width="15"/>
+        <circle cx="47" cy="50" r="12" fill="#E85B10"/>
+      </svg>
+      <b>Grondvorm</b>
+    </a>
+    <nav>
+      <div class="links">
+        <a href="#wat">Wat wij doen</a>
+        <a href="#wie">Wie wij zijn</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="cta" href="mailto:info@grondvorm.com?subject=Contactverzoek%20via%20de%20website">Neem contact op
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h11M8.5 1.5 12 5l-3.5 3.5" stroke="#12304F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-panel">
+      <span class="blob a"></span><span class="blob b"></span><span class="blob c"></span>
+      <div class="inner">
+        <p class="mono">Voorraad &amp; magazijnontwerp</p>
+        <h1>Meer rendement uit uw voorraad en uw magazijn</h1>
+        <p>Grondvorm adviseert ondernemingen over het beheer van hun voorraad en de inrichting van hun magazijnruimte, op basis van de cijfers van de eigen organisatie.</p>
+        <a class="cta lg" href="mailto:info@grondvorm.com?subject=Contactverzoek%20via%20de%20website">Neem contact op
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h11M8.5 1.5 12 5l-3.5 3.5" stroke="#12304F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="pills">
+        <a href="#wat"><b></b>Voorraadscan</a>
+        <a href="#wat"><b></b>Magazijnontwerp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="wat">
+  <div class="wrap">
+    <div class="rv">
+      <div class="head"><span class="mono">Wat wij doen</span><i></i></div>
+      <h2>Onze missie</h2>
+      <p class="mission">Grondvorm adviseert ondernemingen over de inrichting van hun magazijnruimte en het beheer van hun voorraad. Wij baseren ons daarbij op de goederenstromen en verkoopcijfers van de eigen organisatie, zodat elke aanbeveling herleidbaar is tot de praktijk van het bedrijf zelf. Waar de registratie ontoereikend is, wordt deze aangevuld met metingen en waarnemingen op de werkvloer.</p>
+    </div>
+
+    <div class="svc rv">
+      <div><span class="no">01</span><h3>Voorraadscan</h3></div>
+      <div>
+        <p class="intro">Een analyse van de voorraad aan de hand van de verkoop- en voorraadgegevens uit uw eigen systemen. Hierbij komen onder meer aan de orde:</p>
+        <ul>
+          <li>De samenstelling en waarde van de voorraad</li>
+          <li>De mate waarin de vraag zich laat voorspellen</li>
+          <li>De verhouding tussen servicegraad en voorraadkosten</li>
+        </ul>
+        <p class="deliver">De oplevering bestaat uit een rapportage met een onderbouwd voorstel voor het te voeren voorraadbeleid, toegelicht op locatie.</p>
+      </div>
+    </div>
+
+    <div class="svc rv">
+      <div><span class="no">02</span><h3>Magazijnontwerp</h3></div>
+      <div>
+        <p class="intro">Een herinrichting van de logistieke ruimte, opgebouwd vanuit de werkelijke stromen door het pand. Hierbij komen onder meer aan de orde:</p>
+        <ul>
+          <li>De goederenstromen binnen het pand</li>
+          <li>De benodigde ruimte per functie en de onderlinge samenhang daartussen</li>
+          <li>De afweging tussen verschillende inrichtingsalternatieven</li>
+        </ul>
+        <p class="deliver">De oplevering bestaat uit een uitgewerkt ontwerp met een bijbehorend implementatieplan.</p>
+      </div>
+    </div>
+
+    <p class="bridge rv">Beide diensten staan op zichzelf, maar versterken elkaar: de analyse bepaalt of iets ergens hoort te liggen, de indeling bepaalt waar dat dan is.</p>
+  </div>
+</section>
+
+<section class="people-sec" id="wie">
+  <div class="wrap">
+    <div class="rv">
+      <div class="head"><span class="mono">Wie wij zijn</span><i></i></div>
+      <h2>Twee vakgebieden, één aanpak</h2>
+      <p class="mission">Grondvorm helpt ondernemingen meer rendement te halen uit hun voorraad en hun magazijnruimte. Wij werken vanuit data en beproefde logistieke methodieken, zodat elke aanbeveling navolgbaar en onderbouwd is.</p>
+    </div>
+
+    <div class="people">
+      <article class="person rv">
+        <img class="ini" src="maarten.jpg" alt="Maarten Roelofs" width="64" height="64">
+        <h3>Maarten Roelofs</h3>
+        <p>Achtergrond in Logistics Management aan de Hogeschool van Amsterdam, met een focus op data-analyse, procesbeheersing en sturing op prestatie-indicatoren.</p>
+        <p>Maarten heeft ervaring in het analyseren van productiecijfers en het ontwerpen van een KPI-structuur waarmee een organisatie op de werkelijke prestatie kan bijsturen.</p>
+        <p class="quote">&ldquo;Mijn expertise ligt in het inzichtelijk maken van prestaties en het omzetten daarvan in concrete stuurinformatie.&rdquo;</p>
+        <a class="mail" href="mailto:maartenroelofs@grondvorm.com">maartenroelofs@grondvorm.com</a>
+      </article>
+
+      <article class="person rv">
+        <img class="ini" src="loek.jpg" alt="Loek Verkuijl" width="64" height="64">
+        <h3>Loek Verkuijl</h3>
+        <p>Achtergrond in Logistics Management aan de Hogeschool van Amsterdam, met een focus op het analyseren, verbeteren en herontwerpen van logistieke processen.</p>
+        <p>Loek heeft ervaring in het in kaart brengen van goederenstromen en het opleveren van een integraal herontwerp van een magazijnindeling, onder meer voor Bouwmarkt Baarn, waarmee de locatie als bouwhub kan functioneren.</p>
+        <p class="quote">&ldquo;Mijn expertise ligt in het vertalen van operationele data naar een ruimtelijk ontwerp dat aantoonbaar aansluit op de processen.&rdquo;</p>
+        <a class="mail" href="mailto:loekverkuijl@grondvorm.com">loekverkuijl@grondvorm.com</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-panel rv">
+      <span class="blob d"></span>
+      <div>
+        <p class="mono">Contact</p>
+        <h2>Een vraag of een kennismaking?</h2>
+        <p class="lead">Stuur een mail, dan nemen wij op korte termijn contact met u op.</p>
+        <a class="cta lg" href="mailto:info@grondvorm.com?subject=Contactverzoek%20via%20de%20website" style="margin-top:30px">Neem contact op
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h11M8.5 1.5 12 5l-3.5 3.5" stroke="#12304F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="maillist">
+        <div class="grp">
+          <span class="mono">Algemeen</span>
+          <a href="mailto:info@grondvorm.com">info@grondvorm.com</a>
+        </div>
+        <div class="grp">
+          <span class="mono">Telefonisch</span>
+          <a href="tel:+31638663393">+31 6 38 66 33 93 <span>Maarten Roelofs</span></a>
+          <a href="tel:+31638373443">+31 6 38 37 34 43 <span>Loek Verkuijl</span></a>
+        </div>
+        <div class="grp">
+          <span class="mono">Direct contact met een van ons</span>
+          <a href="mailto:maartenroelofs@grondvorm.com">maartenroelofs@grondvorm.com <span>Maarten Roelofs</span></a>
+          <a href="mailto:loekverkuijl@grondvorm.com">loekverkuijl@grondvorm.com <span>Loek Verkuijl</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <b>Grondvorm</b>
+      <span>Voorraad &amp; magazijnontwerp</span>
+    </div>
+    <div>
+      <b>Vestigingsadres</b>
+      <span>Dorpsstraat 603<br>1566 EA Assendelft</span>
+    </div>
+    <div>
+      <b>Bedrijfsgegevens</b>
+      <span>KvK 42122462<br>Btw-nummer NL000000000B01</span>
+    </div>
+    <div>
+      <b>Contact</b>
+      <span><a href="mailto:info@grondvorm.com">info@grondvorm.com</a><br><a href="tel:+31638663393">+31 6 38 66 33 93</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
