@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacyverklaring — Grondvorm</title>
+<meta name="description" content="Hoe Grondvorm omgaat met persoonsgegevens van relaties, opdrachtgevers en bezoekers van deze website.">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0C2137;
+  --navy:#12304F;
+  --steel:#5C7692;
+  --mist:#9FB4C7;
+  --orange:#E2601C;
+  --orange-lift:#F26E24;
+  --paper:#FAF8F4;
+  --tint:#EDF2F6;
+  --line:#DDE4EB;
+  --r-lg:30px;
+  --r-md:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;
+  font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1140px;margin:0 auto;padding:0 26px}
+.mono{
+  font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;
+}
+
+/* header */
+header{position:sticky;top:0;z-index:60;background:rgba(250,248,244,.9);backdrop-filter:blur(12px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--navy)}
+.brand b{font-family:Archivo,sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em}
+nav{display:flex;align-items:center;gap:28px}
+.links{display:flex;gap:26px}
+.links a{color:var(--steel);text-decoration:none;font-size:15px;transition:color .18s ease}
+.links a:hover{color:var(--orange)}
+.cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--orange);color:var(--navy);
+  font-family:Archivo,sans-serif;font-weight:700;font-size:15.5px;letter-spacing:-.01em;
+  padding:13px 26px;border-radius:999px;text-decoration:none;
+  transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+.cta:hover{background:var(--orange-lift);transform:translateY(-2px);box-shadow:0 10px 22px rgba(226,96,28,.28)}
+.cta svg{transition:transform .2s ease}
+.cta:hover svg{transform:translateX(3px)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+
+/* page head */
+.page-head{padding:56px 0 8px}
+.page-head .head{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.page-head .head .mono{color:var(--steel);white-space:nowrap}
+.page-head .head i{flex:1;height:1px;background:var(--line);display:block}
+h1{font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,46px);line-height:1.08;letter-spacing:-.03em;color:var(--navy)}
+.lead{margin-top:20px;font-size:19px;line-height:1.6;max-width:64ch;color:var(--navy)}
+.meta{margin-top:20px;font-size:15px;color:var(--steel)}
+
+/* document */
+.doc{
+  margin:36px 0 0;background:#fff;border-radius:var(--r-lg);
+  padding:50px 56px;
+  box-shadow:0 1px 2px rgba(12,33,55,.05),0 14px 34px rgba(12,33,55,.05);
+}
+.doc section{margin-top:38px}
+.doc section:first-of-type{margin-top:0}
+.doc h2{
+  font-family:Archivo,sans-serif;font-weight:700;font-size:22px;
+  letter-spacing:-.02em;color:var(--navy);line-height:1.2;margin-bottom:12px;
+}
+.doc h2 .n{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:29px;height:29px;border-radius:50%;
+  background:rgba(226,96,28,.14);color:var(--orange);
+  font-size:12.5px;margin-right:12px;vertical-align:2px;
+}
+.doc p{max-width:70ch;margin-bottom:12px}
+.doc p:last-child{margin-bottom:0}
+.doc ul{list-style:none;margin:12px 0 14px}
+.doc li{position:relative;padding-left:26px;margin-bottom:9px;max-width:70ch}
+.doc li::before{content:"";position:absolute;left:0;top:.66em;width:9px;height:9px;border-radius:50%;background:var(--orange);opacity:.85}
+.doc a{color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(226,96,28,.35)}
+.doc a:hover{border-bottom-color:var(--orange)}
+.card{
+  background:var(--tint);border-radius:var(--r-md);
+  padding:22px 26px;margin:14px 0;max-width:70ch;font-size:16.5px;color:var(--navy);
+}
+.card p{margin-bottom:6px}
+.card p:last-child{margin-bottom:0}
+
+/* table */
+.tbl{width:100%;border-collapse:collapse;margin:14px 0;font-size:16px}
+.tbl th,.tbl td{text-align:left;vertical-align:top;padding:12px 16px;border-bottom:1px solid var(--line)}
+.tbl th{
+  font-family:Archivo,sans-serif;font-weight:700;font-size:13.5px;
+  color:var(--navy);border-bottom:1px solid var(--navy);
+}
+.tbl tr:last-child td{border-bottom:none}
+.scroll{overflow-x:auto;margin:14px 0}
+.scroll .tbl{margin:0;min-width:520px}
+
+footer{padding:56px 0 44px;color:var(--steel);font-size:14.5px}
+footer .foot{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:26px;align-items:start;
+  border-top:1px solid var(--line);padding-top:30px;
+}
+footer .foot b{
+  display:block;color:var(--navy);font-family:Archivo,sans-serif;
+  font-weight:700;font-size:14px;margin-bottom:6px;
+}
+footer .foot span{display:block;line-height:1.6}
+footer a{color:var(--steel);text-decoration:none}
+footer a:hover{color:var(--orange)}
+
+@media (max-width:900px){
+  .links{display:none}
+  .page-head{padding:36px 0 0}
+  .doc{padding:32px 26px;border-radius:24px}
+  .doc h2{font-size:20px}
+  .doc h2 .n{display:flex;margin:0 0 10px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Grondvorm">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M88 40 L88 22 L22 22 L22 78 L88 78 L88 50 L52 50" fill="none" stroke="#1F4E9C" stroke-width="15"/>
+        <circle cx="47" cy="50" r="12" fill="#E85B10"/>
+      </svg>
+      <b>Grondvorm</b>
+    </a>
+    <nav>
+      <div class="links">
+        <a href="/#wat">Wat wij doen</a>
+        <a href="/#wie">Wie wij zijn</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <a class="cta" href="mailto:info@grondvorm.com?subject=Contactverzoek%20via%20de%20website">Neem contact op
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h11M8.5 1.5 12 5l-3.5 3.5" stroke="#12304F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap page-head">
+  <div class="head"><span class="mono">Juridisch</span><i></i></div>
+  <h1>Privacyverklaring</h1>
+  <p class="lead">Grondvorm verwerkt persoonsgegevens van relaties, opdrachtgevers en bezoekers van deze website. Hieronder staat welke gegevens dat zijn, waarom wij ze verwerken, hoe lang wij ze bewaren en welke rechten u heeft.</p>
+  <p class="meta">Versie 1.0 &middot; 31 augustus 2026</p>
+</div>
+
+<div class="wrap">
+  <div class="doc">
+
+    <section>
+      <h2><span class="n">01</span>Wie verwerkt uw gegevens</h2>
+      <div class="card">
+        <p><strong>Grondvorm VOF</strong></p>
+        <p>Dorpsstraat 603, 1566 EA Assendelft &middot; KvK 42122462</p>
+        <p><a href="mailto:info@grondvorm.com">info@grondvorm.com</a> &middot; <a href="tel:+31638663393">+31 6 38 66 33 93</a></p>
+      </div>
+      <p>Heeft u een vraag over uw gegevens, dan kunt u die stellen via bovenstaand e-mailadres.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">02</span>Welke gegevens wij verwerken en waarom</h2>
+      <p>Wij verwerken de gegevens die u ons zelf verstrekt wanneer u contact met ons opneemt of wanneer wij een opdracht voor u uitvoeren. In de regel zijn dat uw naam, uw organisatie, uw functie, uw e-mailadres, uw telefoonnummer en de inhoud van uw bericht.</p>
+      <div class="scroll">
+        <table class="tbl">
+          <thead>
+            <tr><th>Doel</th><th>Grondslag</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Uw vraag beantwoorden en een offerte uitbrengen</td>
+              <td>Uitvoering van de overeenkomst of maatregelen op uw verzoek daaraan voorafgaand</td>
+            </tr>
+            <tr>
+              <td>De opdracht uitvoeren en contact houden tijdens het traject</td>
+              <td>Uitvoering van de overeenkomst</td>
+            </tr>
+            <tr>
+              <td>Factureren en onze administratie voeren</td>
+              <td>Wettelijke verplichting</td>
+            </tr>
+            <tr>
+              <td>Contact onderhouden met relaties en organisaties benaderen voor wie onze dienstverlening relevant kan zijn</td>
+              <td>Gerechtvaardigd belang, namelijk het opbouwen en onderhouden van onze zakelijke relaties</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Deze website plaatst geen cookies, gebruikt geen bezoekersstatistieken en volgt uw gedrag niet. Er is geen contactformulier. Wel legt de server van onze hostingpartij, zoals gebruikelijk, technische bezoekgegevens vast in logbestanden. Die worden alleen gebruikt om de website te beveiligen en beschikbaar te houden.</p>
+      <p>Wij gebruiken uw gegevens niet voor geautomatiseerde besluitvorming en verkopen ze niet aan derden.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">03</span>Gegevens die u voor een opdracht aanlevert</h2>
+      <p>Voor een voorraadscan of een magazijnontwerp ontvangen wij gegevens uit uw eigen systemen. Vrijwel altijd zijn dat bedrijfsgegevens en geen persoonsgegevens: artikelnummers, aantallen, locaties, omzet en doorlooptijden. In sommige exports uit een ERP- of WMS-systeem staan echter ook persoonsgegevens, bijvoorbeeld namen van medewerkers, gebruikersnamen of prestatiegegevens die tot een individuele medewerker herleidbaar zijn.</p>
+      <div class="card">
+        <p>Wij vragen u die gegevens vóór aanlevering te verwijderen of te anonimiseren, tenzij zij voor de opdracht noodzakelijk zijn. Zijn zij wel noodzakelijk, dan verwerken wij ze uitsluitend in uw opdracht en onder uw verantwoordelijkheid. Grondvorm treedt dan op als verwerker en wij sluiten daarover vooraf een verwerkersovereenkomst met u.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="n">04</span>Hoe lang wij gegevens bewaren</h2>
+      <div class="scroll">
+        <table class="tbl">
+          <thead>
+            <tr><th>Soort gegevens</th><th>Bewaartermijn</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Contact dat niet tot een opdracht leidt</td>
+              <td>Maximaal twaalf maanden na het laatste contact</td>
+            </tr>
+            <tr>
+              <td>Bestanden die u voor een opdracht aanlevert</td>
+              <td>Uiterlijk zes maanden na afronding verwijderd, of eerder op uw verzoek</td>
+            </tr>
+            <tr>
+              <td>Opdrachtdossier en administratie</td>
+              <td>Zeven jaar, in verband met de fiscale bewaarplicht</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="n">05</span>Met wie wij gegevens delen</h2>
+      <p>Wij delen persoonsgegevens alleen met partijen die wij inschakelen voor onze eigen bedrijfsvoering, of wanneer een wettelijk voorschrift ons daartoe verplicht. Het gaat om onze hostingpartij, onze leverancier van e-mail- en kantoorsoftware, onze boekhouder, en bij een geschil onze verzekeraar of juridisch adviseur. Met partijen die gegevens namens ons verwerken sluiten wij een verwerkersovereenkomst.</p>
+      <p>Verwerkt een van deze partijen gegevens buiten de Europese Economische Ruimte, dan gebeurt dat op basis van een adequaatheidsbesluit van de Europese Commissie of van de door haar vastgestelde standaardcontractbepalingen.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">06</span>Beveiliging</h2>
+      <p>Wij nemen passende technische en organisatorische maatregelen om uw gegevens te beschermen tegen verlies en tegen ongeoorloofde toegang. Toegang tot gegevens is beperkt tot de vennoten van Grondvorm. Vermoedt u dat uw gegevens niet goed beveiligd zijn of dat er sprake is van misbruik, neem dan contact met ons op via <a href="mailto:info@grondvorm.com">info@grondvorm.com</a>.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">07</span>Uw rechten</h2>
+      <p>U heeft het recht op inzage in de gegevens die wij van u verwerken, en het recht die te laten corrigeren, aanvullen of verwijderen. Daarnaast kunt u de verwerking laten beperken, bezwaar maken tegen verwerking die op een gerechtvaardigd belang berust, en de gegevens die u zelf aan ons heeft verstrekt in een gangbaar bestandsformaat ontvangen.</p>
+      <p>Een verzoek kunt u indienen via <a href="mailto:info@grondvorm.com">info@grondvorm.com</a>. Wij reageren binnen één maand. Bent u het niet eens met de manier waarop wij met uw gegevens omgaan, dan horen wij dat graag eerst zelf. U kunt daarnaast altijd een klacht indienen bij de Autoriteit Persoonsgegevens via <a href="https://www.autoriteitpersoonsgegevens.nl" rel="noopener">autoriteitpersoonsgegevens.nl</a>.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">08</span>Wijzigingen</h2>
+      <p>Wij passen deze verklaring aan wanneer onze werkwijze of de wet daartoe aanleiding geeft. De versie op deze pagina is altijd de geldende versie.</p>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <b>Grondvorm</b>
+      <span>Voorraad &amp; magazijnontwerp</span>
+    </div>
+    <div>
+      <b>Vestigingsadres</b>
+      <span>Dorpsstraat 603<br>1566 EA Assendelft</span>
+    </div>
+    <div>
+      <b>Bedrijfsgegevens</b>
+      <span>KvK 42122462<br>Btw-nummer NL869829415B01</span>
+    </div>
+    <div>
+      <b>Contact</b>
+      <span><a href="mailto:info@grondvorm.com">info@grondvorm.com</a><br><a href="tel:+31638663393">+31 6 38 66 33 93</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
