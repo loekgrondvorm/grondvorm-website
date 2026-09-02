@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algemene voorwaarden — Grondvorm</title>
+<meta name="description" content="Algemene voorwaarden van Grondvorm VOF, van toepassing op de voorraadscan en het magazijnontwerp.">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0C2137;
+  --navy:#12304F;
+  --steel:#5C7692;
+  --mist:#9FB4C7;
+  --orange:#E2601C;
+  --orange-lift:#F26E24;
+  --paper:#FAF8F4;
+  --tint:#EDF2F6;
+  --line:#DDE4EB;
+  --r-lg:30px;
+  --r-md:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;
+  font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1140px;margin:0 auto;padding:0 26px}
+.mono{
+  font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;
+}
+
+header{position:sticky;top:0;z-index:60;background:rgba(250,248,244,.9);backdrop-filter:blur(12px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--navy)}
+.brand b{font-family:Archivo,sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em}
+nav{display:flex;align-items:center;gap:28px}
+.links{display:flex;gap:26px}
+.links a{color:var(--steel);text-decoration:none;font-size:15px;transition:color .18s ease}
+.links a:hover{color:var(--orange)}
+.cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--orange);color:var(--navy);
+  font-family:Archivo,sans-serif;font-weight:700;font-size:15.5px;letter-spacing:-.01em;
+  padding:13px 26px;border-radius:999px;text-decoration:none;
+  transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+.cta:hover{background:var(--orange-lift);transform:translateY(-2px);box-shadow:0 10px 22px rgba(226,96,28,.28)}
+.cta svg{transition:transform .2s ease}
+.cta:hover svg{transform:translateX(3px)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+
+.page-head{padding:56px 0 8px}
+.page-head .head{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.page-head .head .mono{color:var(--steel);white-space:nowrap}
+.page-head .head i{flex:1;height:1px;background:var(--line);display:block}
+h1{font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(32px,4.4vw,46px);line-height:1.08;letter-spacing:-.03em;color:var(--navy)}
+.lead{margin-top:20px;font-size:19px;line-height:1.6;max-width:64ch;color:var(--navy)}
+.meta{margin-top:20px;font-size:15px;color:var(--steel)}
+
+.doc{
+  margin:36px 0 0;background:#fff;border-radius:var(--r-lg);
+  padding:50px 56px;
+  box-shadow:0 1px 2px rgba(12,33,55,.05),0 14px 34px rgba(12,33,55,.05);
+}
+.doc section{margin-top:34px}
+.doc section:first-of-type{margin-top:0}
+.doc h2{
+  font-family:Archivo,sans-serif;font-weight:700;font-size:20px;
+  letter-spacing:-.02em;color:var(--navy);line-height:1.2;margin-bottom:12px;
+}
+.doc h2 .n{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:29px;height:29px;border-radius:50%;
+  background:rgba(226,96,28,.14);color:var(--orange);
+  font-size:12.5px;margin-right:12px;vertical-align:2px;
+}
+.doc p{max-width:74ch;margin-bottom:10px;font-size:16px}
+.doc p:last-child{margin-bottom:0}
+.art{margin-bottom:14px}
+.art:last-child{margin-bottom:0}
+.art .num{color:var(--orange);font-weight:500;margin-right:6px}
+.doc a{color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(226,96,28,.35)}
+.doc a:hover{border-bottom-color:var(--orange)}
+.card{
+  background:var(--tint);border-radius:var(--r-md);
+  padding:22px 26px;margin:14px 0;max-width:74ch;font-size:16.5px;color:var(--navy);
+}
+.card p{margin-bottom:6px;font-size:16.5px}
+.card p:last-child{margin-bottom:0}
+
+footer{padding:56px 0 44px;color:var(--steel);font-size:14.5px}
+footer .foot{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:26px;align-items:start;
+  border-top:1px solid var(--line);padding-top:30px;
+}
+footer .foot b{
+  display:block;color:var(--navy);font-family:Archivo,sans-serif;
+  font-weight:700;font-size:14px;margin-bottom:6px;
+}
+footer .foot span{display:block;line-height:1.6}
+footer a{color:var(--steel);text-decoration:none}
+footer a:hover{color:var(--orange)}
+
+@media (max-width:900px){
+  .links{display:none}
+  .page-head{padding:36px 0 0}
+  .doc{padding:32px 26px;border-radius:24px}
+  .doc h2{font-size:18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Grondvorm">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M88 40 L88 22 L22 22 L22 78 L88 78 L88 50 L52 50" fill="none" stroke="#1F4E9C" stroke-width="15"/>
+        <circle cx="47" cy="50" r="12" fill="#E85B10"/>
+      </svg>
+      <b>Grondvorm</b>
+    </a>
+    <nav>
+      <div class="links">
+        <a href="/#wat">Wat wij doen</a>
+        <a href="/#wie">Wie wij zijn</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <a class="cta" href="mailto:info@grondvorm.com?subject=Contactverzoek%20via%20de%20website">Neem contact op
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h11M8.5 1.5 12 5l-3.5 3.5" stroke="#12304F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap page-head">
+  <div class="head"><span class="mono">Juridisch</span><i></i></div>
+  <h1>Algemene voorwaarden</h1>
+  <p class="lead">Deze voorwaarden zijn van toepassing op alle diensten van Grondvorm VOF, waaronder de voorraadscan en het magazijnontwerp. Zij worden als bijlage bij de offerte of de opdrachtbevestiging aan opdrachtgever ter hand gesteld.</p>
+  <p class="meta">Versie 1.0 &middot; 31 augustus 2026</p>
+</div>
+
+<div class="wrap">
+  <div class="doc">
+
+    <section>
+      <h2><span class="n">01</span>Definities</h2>
+      <p class="art"><span class="num">1.1</span>Grondvorm: Grondvorm VOF, gevestigd te Assendelft aan de Dorpsstraat 603 (1566 EA), ingeschreven in het handelsregister van de Kamer van Koophandel onder nummer 42122462.</p>
+      <p class="art"><span class="num">1.2</span>Opdrachtgever: de natuurlijke persoon of rechtspersoon die handelt in de uitoefening van een beroep of bedrijf en die met Grondvorm een overeenkomst aangaat of daarover onderhandelt.</p>
+      <p class="art"><span class="num">1.3</span>Overeenkomst: de overeenkomst van opdracht tussen Grondvorm en opdrachtgever, met inbegrip van de daarbij behorende offerte of opdrachtbevestiging en deze voorwaarden.</p>
+      <p class="art"><span class="num">1.4</span>Opdracht: de werkzaamheden die Grondvorm op grond van de overeenkomst verricht, waaronder een voorraadscan, een magazijnontwerp of een daaruit voortvloeiende vervolgopdracht.</p>
+      <p class="art"><span class="num">1.5</span>Resultaat: de rapportages, analyses, ontwerpen, adviezen, tekeningen, rekenbladen en overige stukken die Grondvorm in het kader van de opdracht oplevert.</p>
+      <p class="art"><span class="num">1.6</span>Schriftelijk: op papier of per e-mail.</p>
+      <p class="art"><span class="num">1.7</span>Voorwaarden: deze algemene voorwaarden.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">02</span>Toepasselijkheid</h2>
+      <p class="art"><span class="num">2.1</span>Deze voorwaarden zijn van toepassing op alle aanbiedingen, offertes, overeenkomsten en overige rechtsverhoudingen tussen Grondvorm en opdrachtgever.</p>
+      <p class="art"><span class="num">2.2</span>Grondvorm stelt deze voorwaarden voor of bij het sluiten van de overeenkomst aan opdrachtgever ter hand, in de regel als bijlage bij de offerte of de opdrachtbevestiging.</p>
+      <p class="art"><span class="num">2.3</span>Afwijkingen van deze voorwaarden gelden uitsluitend indien Grondvorm die schriftelijk heeft aanvaard, en alleen voor de overeenkomst waarop zij betrekking hebben.</p>
+      <p class="art"><span class="num">2.4</span>De toepasselijkheid van inkoopvoorwaarden of andere voorwaarden van opdrachtgever wordt uitdrukkelijk van de hand gewezen.</p>
+      <p class="art"><span class="num">2.5</span>Grondvorm mag deze voorwaarden wijzigen. Op een lopende overeenkomst blijft de versie van toepassing die bij het aangaan daarvan gold.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">03</span>Offertes en totstandkoming van de overeenkomst</h2>
+      <p class="art"><span class="num">3.1</span>Offertes zijn vrijblijvend en geldig gedurende dertig dagen na dagtekening, tenzij in de offerte anders is vermeld.</p>
+      <p class="art"><span class="num">3.2</span>De overeenkomst komt tot stand op het moment dat opdrachtgever de offerte of de opdrachtbevestiging schriftelijk aanvaardt, dan wel op het moment dat Grondvorm met instemming van opdrachtgever met de uitvoering aanvangt.</p>
+      <p class="art"><span class="num">3.3</span>Offertes zijn gebaseerd op de informatie die opdrachtgever bij de aanvraag heeft verstrekt. Blijkt die informatie onjuist of onvolledig, dan mag Grondvorm de offerte aanpassen.</p>
+      <p class="art"><span class="num">3.4</span>Een offerte geldt niet automatisch voor vervolgopdrachten.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">04</span>Uitvoering van de opdracht</h2>
+      <p class="art"><span class="num">4.1</span>Grondvorm voert de opdracht uit naar beste inzicht en vermogen en overeenkomstig de eisen van goed vakmanschap.</p>
+      <p class="art"><span class="num">4.2</span>De overeenkomst is een inspanningsverbintenis. Grondvorm staat niet in voor het bereiken van een bepaald resultaat, waaronder uitdrukkelijk begrepen een besparing, een voorraadverlaging, een servicegraad, een doorlooptijd of enig ander bedrijfseconomisch effect. Kwantitatieve uitkomsten in het resultaat zijn onderbouwde verwachtingen op basis van de op dat moment beschikbare gegevens en gelden niet als toezegging of garantie.</p>
+      <p class="art"><span class="num">4.3</span>Grondvorm bepaalt door wie de opdracht wordt uitgevoerd en mag daarbij derden inschakelen. Voert een derde zelfstandig een substantieel deel van de opdracht uit, dan informeert Grondvorm opdrachtgever daarover vooraf.</p>
+      <p class="art"><span class="num">4.4</span>De besluitvorming over het resultaat en de invoering daarvan in de organisatie van opdrachtgever komen voor rekening en risico van opdrachtgever.</p>
+      <p class="art"><span class="num">4.5</span>Opgegeven termijnen zijn indicatief en gelden niet als fatale termijnen, tenzij partijen dat uitdrukkelijk schriftelijk zijn overeengekomen.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">05</span>Verplichtingen van opdrachtgever</h2>
+      <p class="art"><span class="num">5.1</span>Opdrachtgever verstrekt tijdig, volledig en in het overeengekomen formaat alle gegevens die Grondvorm voor de uitvoering van de opdracht nodig heeft.</p>
+      <p class="art"><span class="num">5.2</span>Opdrachtgever staat in voor de juistheid en de volledigheid van de door hem verstrekte gegevens, ook indien die afkomstig zijn uit systemen van derden. Grondvorm mag op die juistheid afgaan en is niet gehouden de gegevens zelfstandig te verifiëren.</p>
+      <p class="art"><span class="num">5.3</span>Opdrachtgever wijst een contactpersoon aan die namens hem bevoegd is beslissingen te nemen en die gedurende de opdracht bereikbaar is.</p>
+      <p class="art"><span class="num">5.4</span>Voor werkzaamheden op locatie verleent opdrachtgever tijdig toegang tot het pand, zorgt hij voor een veilige werkomgeving en voor de benodigde persoonlijke beschermingsmiddelen, en informeert hij Grondvorm vooraf over de geldende veiligheidsvoorschriften.</p>
+      <p class="art"><span class="num">5.5</span>Levert opdrachtgever niet tijdig of niet volledig aan, dan mag Grondvorm de uitvoering opschorten. De daaruit voortvloeiende vertraging komt voor rekening van opdrachtgever en de daarmee gemoeide extra werkzaamheden worden verrekend tegen het geldende uurtarief.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">06</span>Wijziging en meerwerk</h2>
+      <p class="art"><span class="num">6.1</span>Wenst opdrachtgever de opdracht uit te breiden of te wijzigen, dan legt Grondvorm de gevolgen daarvan voor prijs en planning schriftelijk vast voordat met de wijziging wordt begonnen.</p>
+      <p class="art"><span class="num">6.2</span>Werkzaamheden die buiten de overeengekomen omschrijving vallen gelden als meerwerk en worden verrekend tegen het geldende uurtarief, tenzij schriftelijk anders is overeengekomen.</p>
+      <p class="art"><span class="num">6.3</span>Grondvorm mag een verzochte wijziging weigeren indien die kwalitatief of qua beschikbare capaciteit niet verantwoord is.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">07</span>Prijzen en tarieven</h2>
+      <p class="art"><span class="num">7.1</span>Alle bedragen luiden in euro en zijn exclusief btw en exclusief kosten van door Grondvorm ingeschakelde derden, tenzij anders vermeld.</p>
+      <p class="art"><span class="num">7.2</span>Bij een vaste prijs is de omschrijving van de werkzaamheden in de offerte of de opdrachtbevestiging bepalend voor hetgeen daaronder valt.</p>
+      <p class="art"><span class="num">7.3</span>Reis- en verblijfkosten worden afzonderlijk in rekening gebracht, tenzij in de offerte anders is bepaald.</p>
+      <p class="art"><span class="num">7.4</span>Grondvorm mag haar tarieven jaarlijks per 1 januari aanpassen. Voor een op dat moment lopende opdracht met een vaste prijs blijft de overeengekomen prijs gelden.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">08</span>Facturering en betaling</h2>
+      <p class="art"><span class="num">8.1</span>Grondvorm factureert na oplevering van de opdracht, tenzij anders is overeengekomen. Bij een opdracht met een looptijd van meer dan twee maanden mag Grondvorm maandelijks factureren naar rato van de verrichte werkzaamheden.</p>
+      <p class="art"><span class="num">8.2</span>Betaling vindt plaats binnen dertig dagen na factuurdatum, zonder verrekening, korting of opschorting.</p>
+      <p class="art"><span class="num">8.3</span>Bij overschrijding van de betaaltermijn is opdrachtgever van rechtswege in verzuim, zonder dat een ingebrekestelling is vereist. Vanaf dat moment is hij de wettelijke handelsrente als bedoeld in artikel 6:119a van het Burgerlijk Wetboek verschuldigd.</p>
+      <p class="art"><span class="num">8.4</span>Alle redelijke kosten van invordering, zowel gerechtelijk als buitengerechtelijk, komen voor rekening van opdrachtgever. De buitengerechtelijke incassokosten worden berekend overeenkomstig het Besluit vergoeding voor buitengerechtelijke incassokosten, met een minimum van veertig euro.</p>
+      <p class="art"><span class="num">8.5</span>Bij niet-tijdige betaling mag Grondvorm de uitvoering van de opdracht opschorten en de oplevering van het resultaat uitstellen, nadat zij opdrachtgever daarvan schriftelijk in kennis heeft gesteld.</p>
+      <p class="art"><span class="num">8.6</span>Bezwaren tegen een factuur meldt opdrachtgever binnen veertien dagen na factuurdatum schriftelijk en gemotiveerd. Een bezwaar schort de betalingsverplichting niet op.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">09</span>Geheimhouding</h2>
+      <p class="art"><span class="num">9.1</span>Partijen houden alle vertrouwelijke informatie die zij in het kader van de overeenkomst van elkaar ontvangen geheim en gebruiken die uitsluitend voor het doel waarvoor zij is verstrekt.</p>
+      <p class="art"><span class="num">9.2</span>Als vertrouwelijk geldt in ieder geval alle bedrijfsinformatie van opdrachtgever, waaronder voorraad-, verkoop-, inkoop-, kosten- en prijsgegevens, alsmede de inhoud van het resultaat.</p>
+      <p class="art"><span class="num">9.3</span>De geheimhouding geldt niet voor informatie die reeds openbaar is zonder schending van dit artikel, die een partij zelfstandig heeft ontwikkeld, of waarvan openbaarmaking op grond van een wettelijk voorschrift of een rechterlijke uitspraak verplicht is.</p>
+      <p class="art"><span class="num">9.4</span>De geheimhoudingsplicht blijft van kracht gedurende vijf jaar na het einde van de overeenkomst.</p>
+      <p class="art"><span class="num">9.5</span>Grondvorm mag de bij de uitvoering van de opdracht opgedane algemene kennis en ervaring, alsmede geanonimiseerde gegevens, gebruiken voor haar eigen kennisontwikkeling en voor vergelijkingsdoeleinden, mits die gegevens niet tot opdrachtgever herleidbaar zijn.</p>
+      <p class="art"><span class="num">9.6</span>Grondvorm vermeldt opdrachtgever uitsluitend als referentie en gebruikt diens naam of logo uitsluitend in uitingen na voorafgaande schriftelijke toestemming van opdrachtgever.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">10</span>Verwerking van persoonsgegevens</h2>
+      <p class="art"><span class="num">10.1</span>Voor zover Grondvorm bij de uitvoering van de opdracht persoonsgegevens verwerkt waarvoor opdrachtgever verwerkingsverantwoordelijke is, treedt Grondvorm op als verwerker en sluiten partijen voorafgaand aan die verwerking een verwerkersovereenkomst.</p>
+      <p class="art"><span class="num">10.2</span>Opdrachtgever staat ervoor in dat hij gerechtigd is de gegevens aan Grondvorm te verstrekken en dat die verstrekking rechtmatig is.</p>
+      <p class="art"><span class="num">10.3</span>Opdrachtgever verwijdert of anonimiseert persoonsgegevens in aan te leveren bestanden voor zover die voor de uitvoering van de opdracht niet noodzakelijk zijn.</p>
+      <p class="art"><span class="num">10.4</span>Op de verwerking van persoonsgegevens waarvoor Grondvorm zelf verwerkingsverantwoordelijke is, geldt de <a href="privacyverklaring.html">privacyverklaring</a> van Grondvorm.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">11</span>Intellectuele eigendom</h2>
+      <p class="art"><span class="num">11.1</span>Alle rechten van intellectuele eigendom op het resultaat en op de daarbij door Grondvorm gebruikte modellen, methoden, rekenbladen, tekeningen en instrumenten berusten bij Grondvorm.</p>
+      <p class="art"><span class="num">11.2</span>Na volledige betaling verkrijgt opdrachtgever een niet-exclusief en niet-overdraagbaar recht om het resultaat te gebruiken binnen de eigen organisatie en voor het doel waarvoor het is opgesteld.</p>
+      <p class="art"><span class="num">11.3</span>Opdrachtgever maakt het resultaat niet geheel of gedeeltelijk openbaar, verstrekt het niet aan derden en verveelvoudigt het niet zonder voorafgaande schriftelijke toestemming van Grondvorm. Verstrekking aan de eigen adviseurs van opdrachtgever is toegestaan, mits die aan geheimhouding zijn gebonden.</p>
+      <p class="art"><span class="num">11.4</span>Grondvorm mag de door haar ontwikkelde modellen, methoden en instrumenten ook ten behoeve van andere opdrachtgevers gebruiken.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">12</span>Aansprakelijkheid</h2>
+      <p class="art"><span class="num">12.1</span>Grondvorm is uitsluitend aansprakelijk voor directe schade die het gevolg is van een toerekenbare tekortkoming in de nakoming van de overeenkomst.</p>
+      <p class="art"><span class="num">12.2</span>De aansprakelijkheid van Grondvorm is per opdracht beperkt tot het bedrag dat voor die opdracht aan opdrachtgever in rekening is gebracht, exclusief btw. Bij een opdracht met een looptijd van meer dan zes maanden is de aansprakelijkheid beperkt tot het bedrag dat in de zes maanden voorafgaand aan het schadeveroorzakende feit in rekening is gebracht.</p>
+      <p class="art"><span class="num">12.3</span>Onder directe schade wordt uitsluitend verstaan: de redelijke kosten ter vaststelling van de oorzaak en de omvang van de schade, de redelijke kosten om de prestatie van Grondvorm aan de overeenkomst te laten beantwoorden, en de redelijke kosten ter voorkoming of beperking van de schade.</p>
+      <p class="art"><span class="num">12.4</span>Grondvorm is niet aansprakelijk voor indirecte schade, waaronder gevolgschade, gederfde winst, gemiste besparingen, gemiste omzet, bedrijfsstagnatie, verlies of beschadiging van gegevens, en schade als gevolg van beslissingen die opdrachtgever op basis van het resultaat neemt.</p>
+      <p class="art"><span class="num">12.5</span>Grondvorm is niet aansprakelijk voor schade die voortvloeit uit onjuiste, onvolledige of niet tijdig verstrekte gegevens van opdrachtgever of van door hem ingeschakelde derden.</p>
+      <p class="art"><span class="num">12.6</span>Grondvorm is niet aansprakelijk voor schade die verband houdt met de fysieke uitvoering van een ontwerp, waaronder de constructieve veiligheid van stellingen, vloeren en installaties, de brandveiligheid, en de naleving van voorschriften op het gebied van arbeidsomstandigheden en vergunningen. Opdrachtgever laat het ontwerp voorafgaand aan de uitvoering toetsen door de daartoe bevoegde en gecertificeerde partijen.</p>
+      <p class="art"><span class="num">12.7</span>Iedere vordering tot schadevergoeding vervalt indien zij niet binnen twaalf maanden nadat opdrachtgever de schade heeft ontdekt of redelijkerwijs had kunnen ontdekken schriftelijk bij Grondvorm is gemeld, en in ieder geval vierentwintig maanden na afronding van de opdracht.</p>
+      <p class="art"><span class="num">12.8</span>De beperkingen in dit artikel gelden niet voor zover de schade het gevolg is van opzet of bewuste roekeloosheid van Grondvorm.</p>
+      <p class="art"><span class="num">12.9</span>Opdrachtgever vrijwaart Grondvorm tegen aanspraken van derden die verband houden met de opdracht, tenzij die aanspraken het gevolg zijn van opzet of bewuste roekeloosheid van Grondvorm.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">13</span>Overmacht</h2>
+      <p class="art"><span class="num">13.1</span>Grondvorm is niet gehouden tot nakoming van enige verplichting indien zij daartoe verhinderd is als gevolg van overmacht.</p>
+      <p class="art"><span class="num">13.2</span>Onder overmacht wordt in ieder geval verstaan: ziekte of uitval van de personen die de opdracht uitvoeren, storingen in netwerken, systemen of datalevering, uitval van toeleveranciers, overheidsmaatregelen, en het niet toegankelijk zijn van de locatie van opdrachtgever.</p>
+      <p class="art"><span class="num">13.3</span>Duurt de overmacht langer dan zestig dagen, dan mag ieder van partijen de overeenkomst schriftelijk ontbinden zonder tot schadevergoeding gehouden te zijn. Reeds verrichte werkzaamheden worden in dat geval naar rato afgerekend.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">14</span>Annulering, opschorting en beëindiging</h2>
+      <p class="art"><span class="num">14.1</span>Opdrachtgever kan een overeengekomen opdracht schriftelijk annuleren voordat met de uitvoering is aangevangen. Bij annulering binnen vier weken voor de overeengekomen aanvangsdatum is opdrachtgever vijfentwintig procent van de overeengekomen prijs verschuldigd; bij annulering binnen twee weken voor die datum vijftig procent.</p>
+      <p class="art"><span class="num">14.2</span>Bij tussentijdse beëindiging door opdrachtgever is hij de vergoeding verschuldigd voor de tot dat moment verrichte werkzaamheden en voor de reeds gemaakte kosten.</p>
+      <p class="art"><span class="num">14.3</span>Grondvorm mag de overeenkomst met onmiddellijke ingang opschorten of ontbinden indien opdrachtgever in verzuim is, surseance van betaling aanvraagt, in staat van faillissement wordt verklaard of zijn onderneming staakt.</p>
+      <p class="art"><span class="num">14.4</span>Verplichtingen die naar hun aard bestemd zijn om na het einde van de overeenkomst voort te duren, waaronder die inzake geheimhouding, intellectuele eigendom en aansprakelijkheid, blijven onverminderd van kracht.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">15</span>Klachten</h2>
+      <p class="art"><span class="num">15.1</span>Klachten over het resultaat meldt opdrachtgever binnen veertien dagen na oplevering schriftelijk en gemotiveerd bij Grondvorm.</p>
+      <p class="art"><span class="num">15.2</span>Is de klacht gegrond, dan krijgt Grondvorm een redelijke termijn om het resultaat te herstellen of aan te vullen. Blijkt herstel niet mogelijk, dan wordt de overeengekomen prijs naar redelijkheid verminderd.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">16</span>Slotbepalingen</h2>
+      <p class="art"><span class="num">16.1</span>Op alle overeenkomsten waarop deze voorwaarden van toepassing zijn is Nederlands recht van toepassing.</p>
+      <p class="art"><span class="num">16.2</span>Partijen spannen zich in een geschil in onderling overleg op te lossen voordat zij het aan de rechter voorleggen.</p>
+      <p class="art"><span class="num">16.3</span>Geschillen worden voorgelegd aan de bevoegde rechter van de rechtbank Noord-Holland, tenzij dwingend recht anders voorschrijft.</p>
+      <p class="art"><span class="num">16.4</span>Is een bepaling van deze voorwaarden nietig of wordt zij vernietigd, dan blijven de overige bepalingen onverminderd van kracht. Partijen treden in dat geval in overleg om de betreffende bepaling te vervangen door een bepaling die de strekking daarvan zoveel mogelijk benadert.</p>
+      <p class="art"><span class="num">16.5</span>Deze voorwaarden zijn opgesteld in de Nederlandse taal. Bij een vertaling prevaleert de Nederlandse tekst.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">&middot;</span>Gegevens van Grondvorm</h2>
+      <div class="card">
+        <p>Grondvorm VOF, Dorpsstraat 603, 1566 EA Assendelft</p>
+        <p>KvK-nummer 42122462 &middot; Btw-nummer NL869829415B01</p>
+        <p><a href="mailto:info@grondvorm.com">info@grondvorm.com</a> &middot; <a href="tel:+31638663393">+31 6 38 66 33 93</a> &middot; grondvorm.com</p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <b>Grondvorm</b>
+      <span>Voorraad &amp; magazijnontwerp</span>
+    </div>
+    <div>
+      <b>Vestigingsadres</b>
+      <span>Dorpsstraat 603<br>1566 EA Assendelft</span>
+    </div>
+    <div>
+      <b>Bedrijfsgegevens</b>
+      <span>KvK 42122462<br>Btw-nummer NL869829415B01</span>
+    </div>
+    <div>
+      <b>Contact</b>
+      <span><a href="mailto:info@grondvorm.com">info@grondvorm.com</a><br><a href="tel:+31638663393">+31 6 38 66 33 93</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
